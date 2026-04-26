@@ -51,3 +51,4 @@ Thumbs.db
 .env
 node_modules
 mongosh-*.tgz
+mongosh-*.tgz
