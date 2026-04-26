@@ -14,6 +14,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
 const { auth } = require('express-openid-connect');
+const MongoStore = require('connect-mongo');
 
 const User = require('./models/user');
 const { isAuthenticated, loginHandler } = require('./middleware/auth-middleware');
@@ -56,6 +57,7 @@ app.use(session({
     secret: process.env.SESSION_SECRET || 'supersecretkey',
     resave: false,
     saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI }),
     cookie: {
         httpOnly: true,
         secure: false,
