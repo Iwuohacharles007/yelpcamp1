@@ -11,9 +11,5 @@
       "src": "/(.*)",
       "dest": "app.js"
     }
-  ],
-  "env": {
-    "MONGODB_URI": "@mongodb_connection_string",
-    "SESSION_SECRET": "@session_secret"
-  }
+  ]
 }
