@@ -183,10 +183,7 @@ app.use((err, req, res, next) => {
 // SERVER
 // =====================
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 if (process.env.NODE_ENV !== 'production') {
     const port = process.env.PORT || 3000;
     app.listen(port, () => {
@@ -194,8 +191,5 @@ if (process.env.NODE_ENV !== 'production') {
     });
 }
 
-<<<<<<< Updated upstream
 module.exports = app;
-=======
 module.exports = app;
->>>>>>> Stashed changes
